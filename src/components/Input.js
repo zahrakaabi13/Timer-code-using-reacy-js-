@@ -38,13 +38,9 @@ function InputV(){
           val.value=""
          }
     }
-    var h = Math.floor(input/ 3600)
-    var min = Math.floor((input  % 3600) / 60)
-    var sec = input % 60 
-
-
     
-   // const [seconds, setSeconds] = useState(0);
+
+    //Fonction toggle (play & pause)==========================================
     const [isActive, setIsActive] = useState(false);
     
         function toggle() {
@@ -63,8 +59,12 @@ function InputV(){
          return () => clearInterval(interval);
         }, [isActive, input]);
 
-
-
+    //Declare variables (hour & minutes & seconds)=============================
+    var h = Math.floor(input/ 3600)
+    var min = Math.floor((input  % 3600) / 60)
+    var sec = input % 60 
+    
+    
     return (
     <div className="container">
         <div className="buttons">
