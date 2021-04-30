@@ -55,7 +55,7 @@ function InputV(){
         let interval = null;
         if (isActive) {
         interval = setInterval(() => {
-            setInput(sec + 1);
+            setInput(document.getElementById("valinput").value++ )
         }, 1000);
         } else if (!isActive && input !== 0) {
           clearInterval(interval);
